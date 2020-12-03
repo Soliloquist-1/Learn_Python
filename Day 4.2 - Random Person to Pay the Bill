@@ -1,0 +1,14 @@
+# Split string method
+names_string = input("Give me everybody's names, seperated by a comma. ")
+names = names_string.split(", ")
+
+# Using the len function
+
+import random
+num_items = len(names)
+random_number = random.randint(0, num_items - 1) 
+# Don't forget to minus 1, because Python counts from 0
+
+payer = names[random_number]
+
+print(payer + " is going to pay the bill today!")
