@@ -12,3 +12,8 @@ random_number = random.randint(0, num_items - 1)
 payer = names[random_number]
 
 print(payer + " is going to pay the bill today!")
+
+
+# Or simply using the random.choice function
+payer = random.choice(names)
+print(payer + " is going to pay the bill today!")
