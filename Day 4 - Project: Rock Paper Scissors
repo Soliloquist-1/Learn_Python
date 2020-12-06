@@ -1,0 +1,64 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+# To make game images a list with order, to be invoked later
+game_images = [rock, paper, scissors]
+
+
+# To import random function
+import random
+
+# To get the user's input
+choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+
+# Before anything else, check the user's input
+if choice >= 3 or choice < 0:
+  print("You typed an invalid number, you lose!")
+else:
+  # To print the user's ASCII art, depending on the order of the game image list
+  print(game_images[choice])
+
+  # To create a random number fo the computer
+  computer = random.randint(0, 2)
+
+  # To print the computer's ASCII art
+  print("Computer chose:\n")
+  print(game_images[computer])
+
+  # To start comparing
+  if choice == computer:
+    print("Draw")
+  elif choice == 0 and computer == 2:
+    print("You win!")
+  elif computer == 0 and choice == 2:
+    print("You lose!")
+  elif computer > choice:
+    print("You lose!")
+  elif choice > computer:
+    print("You win!")
+  
+
+
